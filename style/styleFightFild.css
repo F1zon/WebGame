@@ -1,0 +1,36 @@
+body {
+    padding: 0;
+    margin: 0;
+
+    background: black;
+}
+
+#player {
+    width: 30px;
+    height: 28px;
+    background: url(../image/Кораблик_старт.png);
+    position: absolute;
+    top: 90%;
+    left: 500px;
+}
+
+.alien {
+    width: 30px;
+    height: 28px;
+    background: url(../image/Злодеяка.png);
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: 50%;
+    transition: .2s;
+    animation-duration: 10s;
+    animation-name: move;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move {
+    from { left: 25%; }
+    33% { left: 50%; top: 15%; }
+    66% { left: 75%; }
+    to { left: 25%; }
+}
